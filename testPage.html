@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>TODO supply a title</title>
+        <script src="storage.js"></script>
+        <script src="validate_string.js"></script>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script>
+            function test(){
+                output(validateForm("Class1","1:45","MWF"));
+            }
+            
+            function output(output){
+                document.getElementById("testDiv").innerHTML += output+ "<br>";
+            }
+        </script>
+    </head>
+    <body>
+        <div id="testDiv"></div>
+        <button type="button" onclick ="test()">Test</button>
+    </body>
+</html>
