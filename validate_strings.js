@@ -11,5 +11,12 @@ function validateForm(name, time, days) {
         alert("Invalid Input. Enter using one letter for each day.");
         return false;
     }
+	if (days = "mwf" || days = "th" || days = "mw" || days = "f") {
+		days = days.toUpperCase();
+	}
+	else if (days != "MWF" && days != "TH" && days != "MW" && days != "F") {
+		alert("Invalid Input.");
+		return false;
+	}
 	return true;
-}
+} 
