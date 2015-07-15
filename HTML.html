@@ -8,19 +8,22 @@
 </head>
 <body>
 	<p> Please input course information here! </p>
-	<table id = "course_table">
-		<tr id = "heading">
-			<th>Course</th>
-			<th>Days</th>
-			<th>Time</th>
-		</tr>
-		<tr id = "rows">
-			<td><input id = "course"></td>
-			<td><input id = "days"></td>
-			<td><input id = "start_time"></td>
-			<td><input id = "end_time"></td>
-	</table>
-	<button onclick = "add_course()">Add Course</button> 
+	<div id = "semester_input">
+		<div id = "heading">
+			<p>Course Days Time</p>
+		</div>
+		<div id = "rows">
+			<input id = "course">
+			<input type = "checkbox" id = "M">
+			<input type = "checkbox" id = "T">
+			<input type = "checkbox" id = "W">
+			<input type = "checkbox" id = "R">
+			<input type = "checkbox" id = "F">
+			<input id = "start_time">
+			<input id = "end_time">
+		</div>
+	</div>
+	<button onclick = "add_course()" id = "button">Add Course</button> 
 	<div id = "dom"></div>
 </body>
 </html>
