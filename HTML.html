@@ -3,35 +3,7 @@
 <head>
 <meta charset = "utf-8">
 <title>Semester Planner</title>
-<script>
-function add_input() {
-	var put = document.createElement("input")
-	put.id = "new_course"
-	document.body.appendChild(put)
-	document.body.insertBefore(put, add)
-}
-function add_course() {
-	var table = document.getElementById("course_table")
-	/*var rows = table.insertRow(index())
-	var put = document.createElement("input")
-	put.id = "new_course"
-	var course = rows.insertCell(add_input())
-	var days = rows.insertCell(add_input())
-	var time = rows.insertCell(add_input()) */
-	var rows = table.insertRow(2)
-	var put = document.createElement("input")
-	put.id = "new_course"
-	var course = rows.insertCell(0)
-	var days = rows.insertCell(0)
-	var time = rows.insertCell(0)
-}
-function index() {
-	var index = 0
-	for (var i = 2; i < 10; i++) {
-		index = i
-	}
-	return index
-}
+<script src="dom.js">
 </script
 </head>
 <body>
@@ -45,10 +17,10 @@ function index() {
 		<tr id = "rows">
 			<td><input id = "course"></td>
 			<td><input id = "days"></td>
-			<td><input id = "time"></td>
+			<td><input id = "start_time"></td>
+			<td><input id = "end_time"></td>
 	</table>
-	<!-- <button onclick = "add_course()">Add Course</button> -->
-	<button id = "add" onclick = "add_input()">Add Course</button>
+	<button onclick = "add_course()">Add Course</button> 
 	<div id = "dom"></div>
 </body>
 </html>
