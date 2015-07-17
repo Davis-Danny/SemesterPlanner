@@ -3,10 +3,10 @@
 <head>
 <meta charset = "utf-8">
 <title>Semester Planner</title>
-<script src="dom.js">
+<script src="dom.js"></script>
 <script src="timeFormat.js"></script>
 <script src="storage.js"></script>
-</script>
+<script src="https://apis.google.com/js/client.js?onload=checkAuth"></script>
 </head>
 <body>
 	<p> Please input course information here! </p>
@@ -28,13 +28,13 @@
 	<button onclick = "add_course()" id = "button">Add Course</button> 
 	<p> trying Martin's code </p>
 	Name: <br>
-                <input type="text" name="name" id="name">
+                <input type="text" id="name">
                 <br>
                 Start Time: <br>
-                <input type="time" name="starttime">
+                <input type="time" id="starttime">
                 <br>
                 End Time: <br>
-                <input type="time" name="endtime">
+                <input type="time" id="endtime">
                 <br>
 		<input type="checkbox" name="day" value="Monday" id="monBox"> (M)onday<br>
         <input type="checkbox" name="day" value="Tuesday" id="tueBox"> (T)uesday<br>
@@ -44,5 +44,12 @@
 		<button onclick = "add_M_course()" id = "button2">Add Course</button> 
 		<button onclick="timeFormat()">format</button>
         <button onclick="window.open('https://www.google.com/calendar/render#main_7%7Cweek-2+23940+23946+23941')">open calendar</button>
+        <pre id="output"></pre>
+        <div id="authorize-div" style="display: none">
+		<span>Authorize access to Google Calendar API</span>
+		<!--Button for the user to click to initiate auth sequence -->
+		<button id="authorize-button" onclick="handleAuthClick(event)">
+			Authorize</button>
+	</div>
 </body>
 </html>
