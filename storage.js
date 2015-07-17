@@ -69,7 +69,7 @@ function postEvent(event) {
 		'resource' : event
 	});
 	request.then(function(response) {
-		appendPre('Event created: ' + response.result.htmlLink);
+		//appendPre('Event created: ' + response.result.htmlLink);
 	}, function(reason) {
 		alert(reason.errors);
 	});

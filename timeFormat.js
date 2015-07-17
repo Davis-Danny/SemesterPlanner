@@ -5,33 +5,31 @@ function timeFormat() {
 	// regular expression to match required time format
     re = /^\d{2}:\d{2}?$/;
     re2 = /^\d{2}:\d{2}:\d{2}?$/;
-    x = form.starttime.value
-    y = form.endtime.value
+    x = document.getElementById("starttime").value
+    y = document.getElementById("endtime").value
 
-    if(form.starttime.value.match(re)&&form.endtime.value.match(re)){
-    	x = form.starttime.value
-    	y = form.endtime.value
+    if(document.getElementById("starttime").value.match(re)&&document.getElementById("endtime").value.match(re)){
+    	x = document.getElementById("starttime").value
+    	y = document.getElementById("endtime").value
     }else{
-	    if(!form.starttime.value.match(re)) {
-	      alert("Invalid time format: " + form.starttime.value);
-	      form.starttime.focus();
+	    if(!document.getElementById("starttime").value.match(re)) {
+	      alert("Invalid time format: " + document.getElementById("starttime").value);
 	      return false;
 	    }
 	    else{
-	    	x = form.starttime.value + ":00"
+	    	x = document.getElementById("starttime").value + ":00"
 	    }
 	    
-	    if(!form.endtime.value.match(re)) {
-	        alert("Invalid time format: " + form.endtime.value);
-	        form.endtime.focus();
+	    if(!document.getElementById("endtime").value.match(re)) {
+	        alert("Invalid time format: " + document.getElementById("endtime").value);
 	        return false;
 	      }
 	      else{
-	      	y = form.endtime.value + ":00"
+	      	y = document.getElementById("endtime").value + ":00"
 	      }
     }
-    form.starttime.value = x
-    form.endtime.value = y
+    document.getElementById("starttime").value = x
+    document.getElementById("starttime").value = y
     
     var days=[
           document.getElementById("monBox"),
