@@ -56,8 +56,7 @@ function postEvents(){
 	appendPre(x+","+y);
 		if(document.getElementById("monBox").checked){
 			postBuiltEvent(x+":00", y+":00", 0,name);
-		}
-		if(document.getElementById("tueBox").checked){
+		}if(document.getElementById("tueBox").checked){
 			postBuiltEvent(x+":00", y+":00", 1,name);
 		}if(document.getElementById("wedBox").checked){
 			postBuiltEvent(x+":00", y+":00", 2,name);
